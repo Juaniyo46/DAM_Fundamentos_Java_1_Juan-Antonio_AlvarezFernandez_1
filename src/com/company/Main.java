@@ -12,22 +12,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Información para el usuario
-        System.out.println("En este ejercicio el usuario introducirá dos número y el programa dirá si son iguales o no");
+        System.out.println("En este ejercicio el usuario introducirá dos números enteros y el programa dirá si son multipolos o no");
 
         //Pedimos al usuario que introduzca el primer número
-        System.out.println("Introduzca el primer número");
+        System.out.println("Introduzca el primer número entero");
         //Guardamos en la variable el primer valor
-        double num1 = sc.nextDouble();
+        int num1 = sc.nextInt();
         //Pedimos al usuario que introduzca el segundo número
-        System.out.println("Introduzca el segundo número");
+        System.out.println("Introduzca el segundo número entero");
         // Guardamos en la variable num2 el valor introducido
-        double num2 = sc.nextDouble();
+        int num2 = sc.nextInt();
 
-        //Se hacen las comparaciones para indicar si es igual o no
-        if (num1==num2) {
-            System.out.println("Los números introducidos son iguales");
+        //Se hacen las comparaciones para indicar si es multiplo o no
+        if (num1%num2==0) {
+            System.out.printf("El número %d es multiplo de %d",num1,num2);
         } else
-            System.out.println("Los números introducidos no son iguales");
+            System.out.printf("El número %d no es multiplo de %d",num1,num2);
         }
 
 }
