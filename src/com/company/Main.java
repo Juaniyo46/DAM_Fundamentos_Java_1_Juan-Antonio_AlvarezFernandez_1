@@ -12,18 +12,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Información para el usuario
-        System.out.println("En la siguiente ecuación calcularemos la longitud de un circulo.");
-        System.out.println("Introduzca un valor del radio del circulo");
+        System.out.println("En este ejercicio el usuario introducirá un numero (positivo o negativo) y el programa dira si es positivo o negativo");
+        System.out.println("Introduzca un número");
 
         //iniciamos la variable r que corresponde al radio
-        double r = sc.nextDouble();
+        double num = sc.nextDouble();
 
-        //Hacemos los calculos de la formula y seguidamente aproximamos los decimales a 3 digitos
-        double resultado = 2*Math.PI*r;
-        DecimalFormat aprox = new DecimalFormat("#.000");
+        if (num>=0) {
+            System.out.println("El número introducido es positivo");
+        } else if (num<0) {
+            System.out.println("El número introducido es negativo");
+        }
 
-        //Mostramos el resultado al usuario
-        System.out.println("La longitud del circulo indicado es: " + aprox.format(resultado));
 
     }
 }
