@@ -12,36 +12,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Información para el usuario
-        System.out.println("En este ejercicio el usuario introducirá dos números y el programa lor ordenará de mayor a menor");
+        System.out.println("En este ejercicio el usuario introducirá un numero entre 0 y 9,999 y mostrara el número de cifras");
 
         //Pedimos al usuario que introduzca el primer número
-        System.out.println("Introduzca el primer número");
+        System.out.println("Introduzca un número dentro del rango");
         //Guardamos en la variable el primer valor
         double num1 = sc.nextDouble();
-        System.out.println("Introduzca el segundo número");
-        double num2 = sc.nextDouble();
-        System.out.println("Introduzca el tercer número");
-        double num3 = sc.nextDouble();
-
 
         //Se hacen las comparaciones para ordenarlos
-
-        if (num1>num2&&num2>num3) {
-            System.out.println(num1+" "+num2+" "+num3);
-        } else if (num1>num3&&num3>num2) {
-            System.out.println(num1+" "+num3+" "+num2);
-        } else if (num2>num1&&num1>num3) {
-            System.out.println(num2+" "+num1+" "+num3);
-        } else if (num2>num3&&num2>num1) {
-            System.out.println(num2+" "+num3+" "+num1);
-        } else if (num3>num1&&num1>num2) {
-            System.out.println(num3+" "+num1+" "+num2);
-        } else if (num3>num2&&num2>num1) {
-            System.out.println(num3+" "+num2+" "+num1);
+        if (num1>=0&&num1<=9.999) {
+            int cifras=0;
+            
         } else {
-            System.out.println("Hay números que se repiten  y no se pueden ordenar");
+            System.out.println("El número introducido esta fura del rango 0 y 9,999");
         }
 
-    }
+
+            }
 
 }
