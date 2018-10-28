@@ -22,7 +22,14 @@ public class Main {
         //Se hacen las comparaciones y operaciones para mostrar el numero de cifras.
         if (num1>=0&&num1<=9.999) {
             String num = String.valueOf(num1);
-            System.out.println("El numero introducido tiene "+num.length()+" cifras");
+            String reves ="";
+
+            char[] numReves = num.toCharArray();
+
+            for (int i=numReves.length-1; i>-1;i--) {
+                reves+=numReves[i]+"";
+            }
+            System.out.println("El numero introducido con las cifras al reves es: "+reves);
             
         } else {
             System.out.println("El número introducido esta fura del rango 0 y 9,999");
