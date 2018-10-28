@@ -1,41 +1,67 @@
 package com.company;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
 
 
+    public static void display (String variable) {
+        System.out.println(variable);
+    }
+
     public static void main(String[] args) {
 
-        // Abrimos la variable escaner para la introducción de datos mediante teclado.
+        //Declaración de variables
         Scanner sc = new Scanner(System.in);
+        display("Introduzca el número de aciertos");
+        int numAciertos = sc.nextInt();
+        display("Introduzca el número de errores");
+        int numErrores = sc.nextInt();
+        display("Introduzca el número de preguntas");
+        int numPreguntas = sc.nextInt();
+        int notaInt = 0;
+        double notaDouble = 0;
 
-        //Información para el usuario
-        System.out.println("En este ejercicio el usuario introducirá un numero entre 0 y 9,999 y mostrara el número de cifras");
 
-        //Pedimos al usuario que introduzca el primer número
-        System.out.println("Introduzca un número dentro del rango");
-        //Guardamos en la variable el primer valor
-        double num1 = sc.nextDouble();
+        String calificacion = "";
 
-        //Se hacen las comparaciones y operaciones para mostrar el numero de cifras.
-        if (num1>=0&&num1<=9.999) {
-            String num = String.valueOf(num1);
-            String reves ="";
+        //Procesamiento de datos
+        notaInt = ((numAciertos - (numErrores / 2)) * 10) / numPreguntas;
+        notaDouble = ((numAciertos - (numErrores / 2)) * 10) / numPreguntas;
+        double decimal = notaDouble -  notaInt;
 
-            char[] numReves = num.toCharArray();
 
-            for (int i=numReves.length-1; i>-1;i--) {
-                reves+=numReves[i]+"";
-            }
-            System.out.println("El numero introducido con las cifras al reves es: "+reves);
-            
-        } else {
-            System.out.println("El número introducido esta fura del rango 0 y 9,999");
+        if (decimal >= 0.5) {
+            notaInt +=1;
         }
 
 
-            }
+        switch (notaInt) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                calificacion = "INSUFICIENTE";
+                break;
+            case 5:
+                calificacion = "SUFICIENTE";
+                break;
+            case 6:
+                calificacion = "BIEN";
+                break;
+            case 7:
+            case 8:
+                calificacion = "NOTABLE";
+                break;
+            case 9:
+            case 10:
+                calificacion = "SOBRESALIENTE";
+                break;
 
+        }
+        //Muestra de resultados para el usuario
+        display("La nota obtenida según su calificación es " +calificacion);
+
+    }
 }
