@@ -12,24 +12,53 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Información para el usuario
-        System.out.println("En este ejercicio el usuario introducirá una fecha y el programa comprobará si es correcta o no");
+        System.out.println("En este ejercicio el usuario introducirá una nota entre 0 y 10 y la mostrara en letras");
 
         //Declaramos las variables de la fecha y las pedimos por consola.
-        System.out.println("Introduzca el día del mes");
-        int dia = sc.nextInt();
-        System.out.println("Introduzca el mes (en número) del año");
-        int mes=sc.nextInt();
-        System.out.println("Introduzca el año");
-        int año =sc.nextInt();
+        System.out.println("Introduzca una nota entre 0 y 10");
+        int nota = sc.nextInt();
 
-        //Se realizan las validaciones y se informa al usuario
-        if ((mes==4 || mes==6 || mes==9 || mes==11) && (dia>0&&dia<=30) && (año!=0)){
-            System.out.println("Fecha introducida correctamente");
-        } else if ((mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) && (dia>0&&dia<=31 && (año!=0)) ) {
-            System.out.println("Fecha itroducida correctamente");
-        } else if ((mes==2) && (dia>0 && dia<=28) && (año!=0)) {
-            System.out.println("Fecha introducida correctamtene");
-        } else System.out.println("Fecha incorrecta");
+        //Creamos un String vacío para introducir el valor de switch
+        String notaLetras = new String();
+
+        //Se realizan las comprobaciones para adjudicar cada nota a una palabra
+        switch (nota) {
+            case 0:
+                notaLetras="Cero";
+                break;
+            case 1:
+                notaLetras="Uno";
+                break;
+            case 2:
+                notaLetras="Dos";
+                break;
+            case 3:
+                notaLetras="Tres";
+                break;
+            case 4:
+                notaLetras="Cuatro";
+                break;
+            case 5:
+                notaLetras="Cinco";
+                break;
+            case 6:
+                notaLetras="Seis";
+                break;
+            case 7:
+                notaLetras="Siete";
+                break;
+            case 8:
+                notaLetras="Ocho";
+                break;
+            case 9:
+                notaLetras="Nueve";
+                break;
+            case 10:
+                notaLetras="Diez";
+                break;
+        }
+        //Se muestra el resultado
+        System.out.println("La nota introducida es: "+notaLetras);
 
 
     }
