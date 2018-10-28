@@ -19,9 +19,10 @@ public class Main {
         //Guardamos en la variable el primer valor
         double num1 = sc.nextDouble();
 
-        //Se hacen las comparaciones para ordenarlos
+        //Se hacen las comparaciones y operaciones para mostrar el numero de cifras.
         if (num1>=0&&num1<=9.999) {
-            int cifras=0;
+            String num = String.valueOf(num1);
+            System.out.println("El numero introducido tiene "+num.length()+" cifras");
             
         } else {
             System.out.println("El número introducido esta fura del rango 0 y 9,999");
