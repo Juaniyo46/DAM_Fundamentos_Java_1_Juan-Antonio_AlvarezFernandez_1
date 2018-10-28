@@ -50,14 +50,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="399" />
-          <entry key="txt" value="25" />
+          <entry key="java" value="1765" />
+          <entry key="txt" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="399" />
-          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="JAVA" value="1765" />
+          <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open" />
@@ -70,11 +70,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="845">
-              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+            <state relative-caret-position="301">
+              <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
               <folding>
-                <element signature="e#120#121#0" expanded="true" />
-                <element signature="e#164#165#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,7 +103,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540721620686" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540725184134" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -159,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540721466127</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ejericio 14 terminado">
+      <created>1540721669121</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540721669121</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ejericio 15 terminado">
+      <created>1540723466905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540723466905</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -200,16 +213,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ejericio 10 terminado" />
     <MESSAGE value="Ejericio 11 terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejericio 11 terminado" />
+    <MESSAGE value="Ejericio 14 terminado" />
+    <MESSAGE value="Ejericio 15 terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejericio 15 terminado" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="845">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+        <state relative-caret-position="301">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
           <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#164#165#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

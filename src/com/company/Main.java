@@ -15,7 +15,7 @@ public class Main {
         System.out.println("En este ejercicio el usuario introducirá una fecha y el programa comprobará si es correcta o no");
 
         //Declaramos las variables de la fecha y las pedimos por consola.
-        System.out.println("Introduzca el día del mes en el rango de 1 a 30");
+        System.out.println("Introduzca el día del mes");
         int dia = sc.nextInt();
         System.out.println("Introduzca el mes (en número) del año");
         int mes=sc.nextInt();
@@ -23,14 +23,13 @@ public class Main {
         int año =sc.nextInt();
 
         //Se realizan las validaciones y se informa al usuario
-        if (dia>0&&dia<=30){
-            if (mes>0&&mes<=12) {
-                if (año!=0) {
-                    System.out.println("Fecha correcta");
-                }else System.out.println("El año introducido no es correcto, introduzca un valor mayor que 0");
-
-            }else System.out.println("El mes introducido no es correcto, introduzca un valor entre 1 y 12");
-        } else System.out.println("El dia introducido no es correcto, introduzca un valor entre 1 y 30");
+        if ((mes==4 || mes==6 || mes==9 || mes==11) && (dia>0&&dia<=30) && (año!=0)){
+            System.out.println("Fecha introducida correctamente");
+        } else if ((mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) && (dia>0&&dia<=31 && (año!=0)) ) {
+            System.out.println("Fecha itroducida correctamente");
+        } else if ((mes==2) && (dia>0 && dia<=28) && (año!=0)) {
+            System.out.println("Fecha introducida correctamtene");
+        } else System.out.println("Fecha incorrecta");
 
 
     }
