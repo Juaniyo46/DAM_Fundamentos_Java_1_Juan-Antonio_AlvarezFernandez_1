@@ -12,53 +12,31 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Información para el usuario
-        System.out.println("En este ejercicio el usuario introducirá una nota entre 0 y 10 y la mostrara en letras");
+        System.out.println("En este ejercicio el usuario introducirá un numero y le programa dira si es capicua o no");
 
-        //Declaramos las variables de la fecha y las pedimos por consola.
-        System.out.println("Introduzca una nota entre 0 y 10");
-        int nota = sc.nextInt();
+        //Pedimos al usuario que introduzca el primer número
+        System.out.println("Introduzca un número dentro del rango 0 y 9999");
+        //Guardamos en la variable el primer valor
+        int num1 = sc.nextInt();
 
-        //Creamos un String vacío para introducir el valor de switch
-        String notaLetras = new String();
+        //Se hacen las comparaciones para averiguar el número al reves y despues compararlo con el numero normal
+        if (num1>=0&&num1<=9999) {
+            String num = String.valueOf(num1);
+            String reves ="";
 
-        //Se realizan las comprobaciones para adjudicar cada nota a una palabra
-        switch (nota) {
-            case 0:
-                notaLetras="Cero";
-                break;
-            case 1:
-                notaLetras="Uno";
-                break;
-            case 2:
-                notaLetras="Dos";
-                break;
-            case 3:
-                notaLetras="Tres";
-                break;
-            case 4:
-                notaLetras="Cuatro";
-                break;
-            case 5:
-                notaLetras="Cinco";
-                break;
-            case 6:
-                notaLetras="Seis";
-                break;
-            case 7:
-                notaLetras="Siete";
-                break;
-            case 8:
-                notaLetras="Ocho";
-                break;
-            case 9:
-                notaLetras="Nueve";
-                break;
-            case 10:
-                notaLetras="Diez";
-                break;
+            char[] numReves = num.toCharArray();
+
+            for (int i=numReves.length-1; i>-1;i--) {
+                reves+=numReves[i];
+            }
+            if (reves.equals(num)) {
+                System.out.println("El número es capicua");
+            } else System.out.println("El número no es capicua");
+
+
+        } else {
+            System.out.println("El número introducido esta fuera del rango 0 y 9999");
         }
-        //Se muestra el resultado
-        System.out.println("La nota introducida es: "+notaLetras);
 
 
     }
