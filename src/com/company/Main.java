@@ -1,67 +1,38 @@
 package com.company;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
 
 
-    public static void display (String variable) {
-        System.out.println(variable);
-    }
-
     public static void main(String[] args) {
 
-        //Declaración de variables
+        // Abrimos la variable escaner para la introducción de datos mediante teclado.
         Scanner sc = new Scanner(System.in);
-        display("Introduzca el número de aciertos");
-        int numAciertos = sc.nextInt();
-        display("Introduzca el número de errores");
-        int numErrores = sc.nextInt();
-        display("Introduzca el número de preguntas");
-        int numPreguntas = sc.nextInt();
-        int notaInt = 0;
-        double notaDouble = 0;
 
+        //Información para el usuario
+        System.out.println("En este ejercicio el usuario introducirá una fecha y el programa comprobará si es correcta o no");
 
-        String calificacion = "";
+        //Declaramos las variables de la fecha y las pedimos por consola.
+        System.out.println("Introduzca el día del mes en el rango de 1 a 30");
+        int dia = sc.nextInt();
+        System.out.println("Introduzca el mes (en número) del año");
+        int mes=sc.nextInt();
+        System.out.println("Introduzca el año");
+        int año =sc.nextInt();
 
-        //Procesamiento de datos
-        notaInt = ((numAciertos - (numErrores / 2)) * 10) / numPreguntas;
-        notaDouble = ((numAciertos - (numErrores / 2)) * 10) / numPreguntas;
-        double decimal = notaDouble -  notaInt;
+        //Se realizan las validaciones y se informa al usuario
+        if (dia>0&&dia<=30){
+            if (mes>0&&mes<=12) {
+                if (año!=0) {
+                    System.out.println("Fecha correcta");
+                }else System.out.println("El año introducido no es correcto, introduzca un valor mayor que 0");
 
+            }else System.out.println("El mes introducido no es correcto, introduzca un valor entre 1 y 12");
+        } else System.out.println("El dia introducido no es correcto, introduzca un valor entre 1 y 30");
 
-        if (decimal >= 0.5) {
-            notaInt +=1;
-        }
-
-
-        switch (notaInt) {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-                calificacion = "INSUFICIENTE";
-                break;
-            case 5:
-                calificacion = "SUFICIENTE";
-                break;
-            case 6:
-                calificacion = "BIEN";
-                break;
-            case 7:
-            case 8:
-                calificacion = "NOTABLE";
-                break;
-            case 9:
-            case 10:
-                calificacion = "SOBRESALIENTE";
-                break;
-
-        }
-        //Muestra de resultados para el usuario
-        display("La nota obtenida según su calificación es " +calificacion);
 
     }
+
 }
