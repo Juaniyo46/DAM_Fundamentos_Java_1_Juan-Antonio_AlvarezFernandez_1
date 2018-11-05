@@ -12,31 +12,38 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //Información para el usuario
-        System.out.println("En este ejercicio el usuario introducirá un numero entre 0 y 99 y el programa lo mostrara en texto");
+        System.out.println("En este ejercicio el usuario introducirá una fecha y el programa comprobará si es correcta o no");
 
-        //Pedimos al usuario que introduzca el primer número
-        System.out.println("Introduzca un número entero dentro del rango 0 y 99");
-        //Guardamos en la variable el primer valor
-        int num = sc.nextInt();
+        //Declaramos las variables de la fecha y las pedimos por consola.
+        System.out.println("Introduzca el día del mes en el rango de 1 a 30");
+        int dia = sc.nextInt();
+        System.out.println("Introduzca el mes (en número) del año");
+        int mes=sc.nextInt();
+        System.out.println("Introduzca el año");
+        int año =sc.nextInt();
 
-        String unidades [] = {"cero","uno","dos","tres","cuatro","cinco","seis", "siete", "ocho", "nueve","diez"};
-        String especiales [] = {"once","doce","trece","catorce","quince","dieciseis","diecisiete", "dieciocho", "diecinueve"};
-        String decenas [] = {"veinte" , "treinta" , "cuarenta" , "cincuenta" , "sesenta" , "setenta" , "ochenta" , "noventa"};
+        //Se realizan las validaciones y se informa al usuario
+        if (dia>0&&dia<=30){
+            if (mes>0&&mes<=12) {
+                if (año!=0) {
+                    System.out.println("Fecha correcta");
+                }else System.out.println("El año introducido no es correcto, introduzca un valor mayor que 0");
 
-        if (num >= 0 && num<11)
-            System.out.println(unidades[num]);
-        else if (num<20 && num>10)
-            System.out.println('\n' + especiales[num - 11]);
-        else if (num<100 && num>19) {
-            int unid = num % 10;
-            int dec = num / 10;
-            if (unid == 0)
-                System.out.println(decenas[dec -2]);
-            else
-                System.out.println(decenas[dec - 2] + " y " + unidades[unid]);
+            }else System.out.println("El mes introducido no es correcto, introduzca un valor entre 1 y 12");
+        } else System.out.println("El dia introducido no es correcto, introduzca un valor entre 1 y 30");
+
+        if (dia > 0 && dia <30)
+            dia = dia +1;
+        else if (dia == 30) {
+            mes = mes + 1;
+            dia = 1;
+            if (mes>12) {
+                año = año + 1;
+                mes = 1;
+            }
         }
-        else
-            System.out.println("El número introducido no es correcto");
+
+        System.out.println("La fecha del día siguiente es: " + dia +" / "+ mes + " / " + año);
 
 
     }
